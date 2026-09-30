@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sertânia: Desafio de Gestão</title>
+<meta name="description" content="Simulação educativa fictícia de gestão pública municipal inspirada em um município do sertão pernambucano.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section id="home" class="screen">
+  <div class="sun"></div>
+  <div class="hills"></div>
+  <div class="hero">
+    <h1>SERTÂNIA</h1>
+    <h2>DESAFIO DE GESTÃO</h2>
+    <p class="sub">Você recebeu as chaves da cidade. Agora precisa decidir o que fazer com elas.</p>
+    <p class="txt">“Administre recursos, enfrente imprevistos, escolha suas prioridades e descubra as consequências das suas decisões.”</p>
+    <div class="btns">
+      <button id="bContinue" class="btn main" hidden>CONTINUAR MANDATO</button>
+      <button id="bNew" class="btn main">NOVO MANDATO</button>
+      <button id="bHow" class="btn">COMO JOGAR</button>
+      <button id="bAbout" class="btn">SOBRE O SIMULADOR</button>
+      <button id="bErase" class="btn ghost" hidden>APAGAR PROGRESSO</button>
+    </div>
+    <p class="note">Simulação educativa fictícia inspirada na realidade de um município do sertão pernambucano.</p>
+  </div>
+</section>
+
+<section id="game" class="screen" hidden>
+  <header class="top">
+    <div>
+      <div class="brand">PREFEITURA DE SERTÂNIA</div>
+      <div id="date" class="date"></div>
+    </div>
+    <div class="money">
+      <span>Orçamento disponível</span>
+      <strong id="budget"></strong>
+    </div>
+    <button id="bMenu" class="btn small">Menu</button>
+  </header>
+  <main class="grid">
+    <div class="col">
+      <div id="inds" class="inds"></div>
+      <button id="bNext" class="btn main big">Avançar para o próximo mês</button>
+    </div>
+    <aside class="side">
+      <div class="card">
+        <h3>Mapa do município</h3>
+        <div class="map" id="map">
+          <div id="a-centro" class="z">Centro urbano</div>
+          <div id="a-bairros" class="z">Bairros</div>
+          <div id="a-rural" class="z">Zona rural</div>
+          <div id="a-comunid" class="z">Comunidades rurais</div>
+          <div id="a-estradas" class="z">Estradas</div>
+        </div>
+      </div>
+      <div class="card fin">
+        <h3>Finanças do mandato</h3>
+        <dl>
+          <dt>Receitas</dt><dd id="fRec"></dd>
+          <dt>Gastos no mandato</dt><dd id="fGas"></dd>
+          <dt>Despesas previstas (mês)</dt><dd id="fDes"></dd>
+          <dt>Receita prevista (mês)</dt><dd id="fRev"></dd>
+        </dl>
+      </div>
+      <div class="card">
+        <h3>Notícias da cidade</h3>
+        <ul id="feed" class="feed"></ul>
+      </div>
+    </aside>
+  </main>
+</section>
+
+<section id="end" class="screen" hidden></section>
+
+<div id="overlay" class="overlay" hidden><div id="modal" class="modal" role="dialog" aria-modal="true"></div></div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
